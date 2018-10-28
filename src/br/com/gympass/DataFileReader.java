@@ -17,7 +17,6 @@ public class DataFileReader {
     private static Logger LOGGER = new Logger("DataFileReader");
 
     private String filepath;
-
     private Map<String, Pilot> pilots = null;
 
     public DataFileReader() {
@@ -27,7 +26,12 @@ public class DataFileReader {
         this.filepath = filepath;
     }
 
+    /**
+     * Metodo Responsavel por ler o arquivo de dados informado
+     */
     public void read() {
+        pilots = null;
+
         final File file = new File(filepath);
         if (!file.exists()) {
             LOGGER.warn("Arquivo inexistente");

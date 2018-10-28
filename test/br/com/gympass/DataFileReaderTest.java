@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class DataFileReaderTest {
     private static final String FILEPATH_ONE_PILOT_ONE_LAP_OK = "./test/pilot_one_lap.txt";
+    private static final String FILEPATH_ONE_PILOT_TWO_LAP_OK = "./test/pilot_two_lap.txt";
     private static final int PILOT_CODE_F_MASSA = 38;
     private static final String PILOT_NAME_F_MASSA = "F.MASSA";
     private static final int LAP_NUMBER = 1;
@@ -15,7 +16,24 @@ public class DataFileReaderTest {
     private static final long LAP_START_TIME = 85748277;
 
     @Test
-    public void readDataFileOK() {
+    public void readDataFileOnePilotTwoLapsOK() {
+        final DataFileReader reader = new DataFileReader();
+        reader.setFilePath(FILEPATH_ONE_PILOT_TWO_LAP_OK);
+        reader.read();
+
+        final Map<String, Pilot> pilots = reader.getPilots();
+        Assert.assertEquals(1, pilots.size());
+
+        final Pilot pilot = pilots.get(PILOT_NAME_F_MASSA);
+        Assert.assertNotNull(pilot);
+
+        final Map<Integer, Lap> laps = pilot.getLaps();
+        Assert.assertNotNull(laps);
+        Assert.assertEquals(2, laps.size());
+    }
+
+    @Test
+    public void readDataFileOnePilotOneLapsOK() {
         final DataFileReader reader = new DataFileReader();
         reader.setFilePath(FILEPATH_ONE_PILOT_ONE_LAP_OK);
         reader.read();
