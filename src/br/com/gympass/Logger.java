@@ -8,7 +8,6 @@ import java.util.GregorianCalendar;
  * Classe responsavel por funcionar como wapper do sistema de log.
  */
 public class Logger {
-
     private static final String WARN = "WARN";
     private static final String SEPARATOR = " - ";
     private final String name;
