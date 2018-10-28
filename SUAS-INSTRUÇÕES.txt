@@ -1,0 +1,19 @@
+Teste de admição para a empresa GYMPASS
+
+Autor: Felipe Santos Pinheiro
+
+Solução:
+
+Foi criado um progrma para ser executado através de um comando no shell. Para executar deve informar como parametro o 
+caminho para o arquivo com os dados a serem processados. O dados serão impressos na tela aapós o processamento.
+
+A solução foi criada utilizando a lingugem Java na versão 8 e utlizando o framework Junit para a executação dos testes 
+unitarios. O desenvolvimento da realizado utilizando a IDE Eclipse, versão Neon. A JVM utilizada nos testes foi a 
+JDK1.8.1_191. O sistema operacional foi o Linux-Ubuntu 41.
+
+O projeto foi dividio em dois grupos de códigos fonte. O grupo 'src' possui as classes para a execução do programa e o 
+'test' possui as classes utilizadas para executar os testes unitários. As classes 'Lap' e 'Pilot' representam o dominio
+de negócio do onde são representadas as entidades do problema. As classes 'DataFileReader' e 'LineSplitter' foi criadas 
+para ler o arquivo de dados em preencher as entidades de negócio. A classe 'DataRacingProcess' é responsável por 
+processar os dados lidos e gerar os dados relativos a corrida. A classe 'RacingReport' é responsavel por gerar o 
+relatório a  ser impresso na tela. A classe 'Logger' é utlizada como apoio para emcapsular o serviço de Log do sistema. 
