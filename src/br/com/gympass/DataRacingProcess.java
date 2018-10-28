@@ -34,7 +34,7 @@ public class DataRacingProcess {
                 final Integer lastLap2 = o2.getLastLap();
                 final int c = lastLap1.compareTo(lastLap2);
                 if (c != 0) {
-                    return c;
+                    return c * -1;
                 }
 
                 final Long totalRacingTime1 = o1.getTotalRacingTime();
@@ -64,7 +64,7 @@ public class DataRacingProcess {
             pilot.setTotalRacingTime(totalRacingTime);
         }
 
-        pilot.setLastLap(lapIndex);
+        pilot.setLastLap(lapIndex - 1);
     }
 
 }

@@ -53,18 +53,21 @@ public class LineSplitter {
             return;
         }
 
-        informations.find();
-        convertHours(informations.group(1));
-        convertMinutes(informations.group(2));
-        convertSeconds(informations.group(3));
-        convertMiliseconds(informations.group(4));
-        convertPilotCode(informations.group(5));
-        convertPilotName(informations.group(6));
-        convertLapNumber(informations.group(7));
-        convertLapMinute(informations.group(8));
-        convertLapSegundo(informations.group(9));
-        convertLapMiliseconds(informations.group(10));
-        convertAvaregeSpeed(informations.group(11));
+        if (informations.find()) {
+            convertHours(informations.group(1));
+            convertMinutes(informations.group(2));
+            convertSeconds(informations.group(3));
+            convertMiliseconds(informations.group(4));
+            convertPilotCode(informations.group(5));
+            convertPilotName(informations.group(6));
+            convertLapNumber(informations.group(7));
+            convertLapMinute(informations.group(8));
+            convertLapSegundo(informations.group(9));
+            convertLapMiliseconds(informations.group(10));
+            convertAvaregeSpeed(informations.group(11));
+        } else {
+            valid = false;
+        }
     }
 
     private void convertAvaregeSpeed(final String avaregeSpeedString) {

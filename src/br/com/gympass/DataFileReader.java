@@ -71,6 +71,10 @@ public class DataFileReader {
     }
 
     private void processLine(final String line) {
+        if (line == null || line.isEmpty()) {
+            return;
+        }
+
         final LineSplitter splitter = new LineSplitter();
         splitter.setLine(line);
         splitter.split();

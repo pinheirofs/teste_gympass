@@ -8,7 +8,9 @@ import java.util.GregorianCalendar;
  * Classe responsavel por funcionar como wapper do sistema de log.
  */
 public class Logger {
+    private static final String INFO = "INFO";
     private static final String WARN = "WARN";
+    private static final String ERRO = "ERRO";
     private static final String SEPARATOR = " - ";
     private final String name;
 
@@ -16,8 +18,16 @@ public class Logger {
         this.name = name;
     }
 
+    public void info(final String msg) {
+        System.out.println(createLine(INFO, msg));
+    }
+
     public void warn(final String msg) {
         System.out.println(createLine(WARN, msg));
+    }
+
+    public void erro(final String msg) {
+        System.out.println(createLine(ERRO, msg));
     }
 
     private String createLine(final String type, final String msg) {
