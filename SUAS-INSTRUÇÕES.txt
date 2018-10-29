@@ -17,3 +17,7 @@ de negócio do onde são representadas as entidades do problema. As classes 'Dat
 para ler o arquivo de dados em preencher as entidades de negócio. A classe 'DataRacingProcess' é responsável por 
 processar os dados lidos e gerar os dados relativos a corrida. A classe 'RacingReport' é responsavel por gerar o 
 relatório a  ser impresso na tela. A classe 'Logger' é utlizada como apoio para emcapsular o serviço de Log do sistema. 
+
+Observação:
+
+Foi encotrado um erro nos dados informados no arquivo de exemplo. Na linha 19, o nome do piloto não correponde a nenhum outo nomne, assim pelos dados, esse piloto só correu a quarta volta, o que não faz muito sentido. A solução criada ainda não é consegue tratar esse tipo de erro.
